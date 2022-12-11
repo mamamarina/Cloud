@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(255, 255, 255); 
+}
+
+h1 {
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 14px;
+    letter-spacing: 1.1px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li, 
+a {
+    display: block;
+}
+
+a,
+h3 {
+    color: rgb(179, 193, 219)
+}
+
+a {
+    cursor: pointer;
+}
+
+span {
+    color: rgb(179, 193, 219);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: start;
+}
+
+.btn {
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-size: 10px;
+    text-decoration: none;
+    min-width: 65px;
+    height: 20px;
+    text-align: center;
+    background-color: rgb(115, 131, 165);
+    border-radius: 3px;
+    opacity: 0.9;
+    padding: 4px 1px;
+    margin-right: 7px;
+    
+    &--pink {
+        border-left: 2px solid rgb(184, 57, 150);
+        &:hover,
+        &:focus {
+          background-color: rgb(165, 117, 152);
+        }
+    }
+
+    &--blue {
+        border-left: 2px solid rgb(9, 185, 238);
+        &:hover,
+        &:focus {
+          background-color: rgb(135, 206, 250);
+        }
+    }
+
+    &--mint {
+        border-left: 2px solid rgb(6, 245, 173);
+        &:hover,
+        &:focus {
+          background-color: rgb(96, 230, 196);
+        }
+    }
+
+    &--lime {
+        border-left: 2px solid rgb(36, 241, 9);
+        &:hover,
+        &:focus {
+          background-color: rgb(144, 238, 144);
+        }
+    }
+
+    &--pink,
+    &--blue,
+    &--mint,
+    &--lime {
+        transition: background-color 0.5s;
+    }
+}
+
+.fa-solid {
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include sm {
+        display: none;
+    }
+}
+

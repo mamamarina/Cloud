@@ -1,0 +1,80 @@
+.header {
+    @extend %grid;
+
+    &-logo {
+
+        @include sm-min {
+            border-right: 1px solid rgb(73, 84, 109);
+        }
+        
+        &__img {
+            display: block;
+            margin: 20px 0 0 40px;
+            transition: ease-in-out 0.5s;
+
+            &:hover {
+                @extend %hover;
+            }
+        }
+    }
+
+    &-navbar {
+        margin: 15px;
+        width: max-content;
+        position: relative;
+        
+        @include sm {
+            justify-self: end;
+            margin-right: 0;
+        }
+
+        &__list {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            @include sm {
+                flex-direction: column;
+                align-items: flex-end;
+                text-align: right;
+            }
+        }
+
+        &__item {
+            list-style: none;
+            margin-right: 50px;
+
+            @include sm {
+                margin-right: 30px;
+            }
+           
+            &:last-child {
+                position: relative;
+
+                &::after {
+                    content: "*";
+                    color: rgb(255, 0, 0); 
+                    position: absolute;
+                    top: 0;
+                    right: 0; 
+                }
+                 
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            position: relative;  
+            padding: 10px 10px;  
+            font-weight: 500;
+            font-size: 12px;
+            &:hover {
+                @extend %hover;
+            }
+
+            @include sm {
+                font-size: 14px;
+            }
+        }
+    }
+}

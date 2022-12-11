@@ -1,0 +1,27 @@
+.content {
+    padding: 0px 20px;
+    
+    &-heading {
+        display: flex;
+        align-items: center;
+    
+        &__arrow {
+            margin-right: 20px; 
+        }
+
+        &__text {
+            padding: 20px 0;
+        }
+    }
+
+    &-sections {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+    }
+}

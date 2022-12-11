@@ -1,0 +1,30 @@
+.aside {
+    border-right: 1px solid rgb(73, 84, 109);
+
+    @include sm {
+        display: none;
+        border: none;
+    }
+
+    &-navbar {
+        border-right: 2px solid rgb(73, 84, 109);
+        margin-left: 20px;
+        height: auto;
+        
+        &__link {
+            text-decoration: none;
+            font-size: 15px; 
+            padding: 12px 0;
+            transition: ease-in-out 0.1s;
+
+            &:hover {
+                @extend %hover;
+            }
+        }
+    }    
+}
+
+.active {
+    border-right: 1px solid white;
+    color: white;
+}

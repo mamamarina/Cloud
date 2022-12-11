@@ -1,0 +1,43 @@
+.section {
+    position: relative;
+    padding: 0 30px;
+    border-right: 1px solid rgb(97, 105, 121);
+
+    @include sm {
+        border: none;
+    }
+
+    &__logo {
+        display: flex;
+        margin-left: 33%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 55px;
+        height: 55px;
+        overflow: hidden;
+        transition: ease-in-out 0.5s;
+
+        &:hover {
+            transform: rotateZ(360deg);
+            filter: drop-shadow(20px 20px 25px white);
+        }
+
+        @include sm {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &-article {
+        margin-bottom: 40px;
+
+        &__heading {
+            transition: ease-in-out 0.3s;
+
+            &:hover {
+                @extend %hover;
+            }
+        }
+    }
+}
+
